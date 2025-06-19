@@ -1,0 +1,64 @@
+//Internal JS
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var emp={
+        Ename:"sheela",
+        Eid:21,
+        Esal:"40k"
+        Eskills:['html','css','js'],
+        EAddress:{
+            Earea:"xyz",
+            Ecity:"banglore"
+        }
+    }
+    console.log(emp);
+    //stringify() is used to make the normal object as a json object
+    var res=JSON.stringify(emp);
+    console.log(res);
+    //parse()is used to convert json object as a normal object
+    console.log(JSON.parse(res));
+  </script>  
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Stringify and Parse Example</title>
+</head>
+<body>
+    <script>
+        // Define an employee object
+        var emp = {
+            Ename: "Sheela",
+            Eid: 21,
+            Esal: "40k",
+            Eskills: ['HTML', 'CSS', 'JavaScript'],
+            EAddress: {
+                Earea: "XYZ",
+                Ecity: "Bangalore"
+            }
+        };
+
+        // Log the original object
+        console.log("Original Object:", emp);
+
+        // Convert the object to a JSON string
+        var jsonString = JSON.stringify(emp);
+        console.log("JSON String:", jsonString);
+
+        // Convert the JSON string back to an object
+        var parsedObject = JSON.parse(jsonString);
+        console.log("Parsed Object:", parsedObject);
+    </script>
+</body>
+</html>
