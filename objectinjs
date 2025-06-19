@@ -1,0 +1,71 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./object.js"></script>
+</body>
+</html>
+
+//Javascript
+//Object:-It is a real world entity having both states and behaviour.
+//By using object literals
+var emp ={
+    Ename:"samroj",
+    Eid:21,
+    Esal:"6lpa"
+
+}
+console.log(emp);
+//dot notation
+console.log(emp.Eid);
+//Bracket notation
+console.log(emp["Ename"]);
+//By using new keyword
+let stu=new Object();
+console.log(stu);
+stu.Sname="sheela";
+stu.Sid=12;
+stu.Sbranch="ECE";
+console.log(stu);
+//By using constructor function
+console.log(this);
+function pen(Pname,Pprice,Pcolor){
+    this.Pname=Pname;
+    this.Pprice=Pprice;
+    this.Pcolor=Pcolor;
+
+}
+var z=new pen("cello","10rs","blue")
+console.log(z.Pcolor);
+//Inbuilt methods of an oject
+var emp={
+    Ename:"samroj",
+    Eid:21,
+    Esal:"6lpa"
+}
+var stu={
+    Sname:"mala",
+    Sid:12
+}
+console.log(emp);
+console.log(Object.keys(emp));
+console.log(Object.values(emp));
+console.log(Object.entries(emp));
+console.log(Object.assign({},emp,stu));
+console.log(stu.hasOwnProperty("Sname"));//true
+console.log(Object.seal(stu));//mutable
+console.log(Object.isSealed(stu));
+console.log(stu.Sid);//access is possible
+delete stu.Sname;
+console.log(stu);//we cant able to delete the property
+stu.Sid=100;
+console.log(stu);//modify is possible
+stu.Sper="98%";
+console.log(stu);//adding the property is not possible
+console.log(Object.freeze(emp));//immutable
+console.log(Object.isFrozen(emp));
