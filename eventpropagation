@@ -1,0 +1,88 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grandparent{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+        }
+        #parent{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        #child{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="grandparent">
+        grandparent
+        <div id="parent">
+            parent
+            <div id="child">
+               child
+            </div>
+        </div>
+    </div>
+    <div id="parent" onclick="fun2()">
+        parent
+        <div id="child" onclick="fun1(event)">
+            child
+        </div>
+
+    </div>
+    <input type="checkbox" id="input">
+    <script src="./eventpropagation.js"></script>
+</body>
+</html>
+
+*//javascript*
+//Bubbling phase
+//var gp=document.getElementById("grandparent");
+//var p=document.getElementById("parent");
+//var c=document.getElementById("child");
+//gp.addEventListener('click',()=>{
+//    alert("iam grandparent")
+//})
+//p.addEventListener('click',()=>{
+//   alert("i am parent")
+//})
+//c.addEventListener('click',()=>{
+//    alert("i am child")
+//})
+
+//capturing phase
+//var gp=document.getElementById("grandparent");
+//var p=document.getElementById("parent");
+//var c=document.getElementById("child");
+//gp.addEventListener('click',()=>{
+//    alert("iam grandparent")
+//},true)
+//p.addEventListener('click',()=>{
+//    alert("iam parent")
+//},true)
+//c.addEventListener('click',()=>{
+//    alert("iam child")
+//})
+
+function fun1(event){
+    alert("iam child")
+    if(document.getElementById("input").checked){
+        event.stopPropagation()
+        
+    }
+
+}
+
+function fun2(){
+    alert("iam parent")
+}
