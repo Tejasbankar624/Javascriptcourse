@@ -1,0 +1,44 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time delays in Javascript</title>
+</head>
+<body>
+    <p id="para"></p>
+    <button onclick="task()">Click me</button>
+    <script src="./timedelays.js"></script>
+</body>
+</html>
+
+//js
+//!set interval():-A function will call for every specifiy time (eg: in this eg for 3 sec)
+var x=document.getElementById("para");
+setInterval(function(){
+    x.innerHTML+="iam para"
+},3000)
+
+//!clearInterval():-
+
+//var x=document.getElementById("para");
+//var res=setInterval(function(){
+//    x.innerHTML+="iam para"
+//},3000)
+
+//function task(){
+//       clearInterval(res)
+//}
+
+//!SetTimeout():-
+//var x=document.getElementById("para");
+//var res=setInterval(function(){
+//    x.innerHTML+="iam para"
+//},5000)
+
+//function task(){
+//       clearTimeout(res)
+//}
+
+
