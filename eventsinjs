@@ -1,0 +1,42 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button id="btn" onclick="demo()">Click me</button>
+    <span id="box"ondblclick="task()">hello</span>
+    <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quae?</p>
+    <input type="text"onkeypress="display()">-->
+    <div style="background-color:yellow;
+    height:200px;"id="container">contextmenu is in disabled state</div>
+    <script src="./events.js"></script>
+</body>
+</html>
+
+////var x=document.getElementById("btn");
+//x.addEventListener('click',function(){
+  //  alert("iam click event")
+//})
+function demo(){
+    alert("i am onclick event")
+}
+function task(){
+    var x=document.getElementById("box")
+    x.innerHTML="iam span"
+}
+// var z1=document.getElementById("para");
+//z1.addEventListener('mouseover',function()){
+// z1.style.backgroundColor="red"
+//})
+//function display(){
+//   alert("you have pressed key from the keyboard")
+//    }
+
+var x=document.getElementById("container")
+x.addEventListener('contextmenu',(x)=>{
+    x.preventDefault();
+})
