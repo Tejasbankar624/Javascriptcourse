@@ -1,0 +1,27 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil debitis praesentium quis adipisci molestiae sapiente similique voluptate animi saepe.</p>
+     <!--<script>
+        var x=Math.random()*(9999-1000)+1000
+        console.log(x);
+        var otp=Math.floor(x);
+        console.log(otp);
+     </script>-->
+     <script src="./dom.js"></script>
+</body>
+</html>
+//Javascript
+var z=document.getElementById("para");
+z.setAttribute("class","box");
